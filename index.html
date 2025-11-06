@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龙珠格斗 - Dragon Ball Fighter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🐉 龙珠格斗 Dragon Ball Fighter</h1>
+        </div>
+
+        <div class="game-screen">
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- UI层 -->
+            <div class="game-ui">
+                <!-- 玩家1血条和信息 -->
+                <div class="player-info player1-info">
+                    <div class="player-name">悟空 (GOKU)</div>
+                    <div class="health-bar-container">
+                        <div class="health-bar" id="player1Health"></div>
+                    </div>
+                    <div class="energy-bar-container">
+                        <div class="energy-bar" id="player1Energy"></div>
+                    </div>
+                </div>
+
+                <!-- 时间显示 -->
+                <div class="timer-container">
+                    <div class="timer" id="timer">99</div>
+                    <div class="round">ROUND 1</div>
+                </div>
+
+                <!-- 玩家2血条和信息 -->
+                <div class="player-info player2-info">
+                    <div class="player-name">贝吉塔 (VEGETA)</div>
+                    <div class="health-bar-container">
+                        <div class="health-bar" id="player2Health"></div>
+                    </div>
+                    <div class="energy-bar-container">
+                        <div class="energy-bar" id="player2Energy"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 游戏提示 -->
+            <div class="game-message" id="gameMessage"></div>
+        </div>
+
+        <!-- 控制说明 -->
+        <div class="controls-panel">
+            <div class="controls-section">
+                <h3>玩家1 控制</h3>
+                <div class="control-list">
+                    <div><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移动/跳跃</div>
+                    <div><kbd>J</kbd> 攻击</div>
+                    <div><kbd>K</kbd> 防御</div>
+                    <div><kbd>U</kbd> 必杀技 (龟派气功)</div>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <h3>玩家2 控制</h3>
+                <div class="control-list">
+                    <div><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> 移动/跳跃</div>
+                    <div><kbd>1</kbd> 攻击</div>
+                    <div><kbd>2</kbd> 防御</div>
+                    <div><kbd>3</kbd> 必杀技 (终极闪光)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="start-button-container">
+            <button id="startButton" class="start-button">开始游戏 START</button>
+        </div>
+    </div>
+
+    <!-- JavaScript 文件 -->
+    <script src="js/particle.js"></script>
+    <script src="js/fighter.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
